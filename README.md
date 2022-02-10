@@ -2,7 +2,7 @@
 A blockchain implementation in python.
 # Usage
 ```bash
-python cli.py [-h] [--level] [--attack] [--cycles]
+python cli.py [-h] [--level] [-noc] [--attack] [--cycles]
 ```
 `-h` Show help.
 
