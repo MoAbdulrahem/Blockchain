@@ -21,7 +21,7 @@ def main():
     else:
       blockchain=Blockchain()
 
-    if (args.level and args.no_of_blocks and args.attack):
+    if (args.level and args.no_of_blocks and args.attack and args.cycles):
       print('The initial chain is '+ str(args.no_of_blocks) + " blocks long.")
       print('Normal user tries to append to the longest chain.')
       print('Attacker appends after block '+ str(args.attack) + " with TRIPLE the CPU power of the normal user.")
@@ -48,6 +48,10 @@ def main():
         local_head = temp_block
 
 
+      print_blockchain(blockchain)
+
+    elif args.level and args.no_of_blocks:
+      tests.generate_blockchain(blockchain, args.no_of_blocks, 0)
       print_blockchain(blockchain)
 
   except:
