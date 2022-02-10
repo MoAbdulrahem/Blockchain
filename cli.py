@@ -7,7 +7,6 @@ from utility import attack
 def main():
   try:
     parser = argparse.ArgumentParser()
-    # parser.add_argument('torrent', help='path to the .torrent file')
     parser.add_argument('-l', '--level', type=int, help='Difficulty level (default 4)- Number of zeroes needed at the start of an acceptable hash.')
     parser.add_argument('-nob', '--no_of_blocks', type=int, help='Number of blocks to be mined by user')
     parser.add_argument('-a', '--attack', help='The block number to inject after.')
